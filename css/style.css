@@ -1,0 +1,517 @@
+:root{
+    --gray-light :#bababa;
+    --gray-dark :#8d8d8d;
+    --celeste-light :#a6cbeb;
+    --celeste-dark :#4c96d7;
+    --black :#3a3a3a;
+}
+.notice{
+    color: red;
+}
+input:focus{
+    outline: none;
+}
+
+#wrapper{
+    
+    width: 100%;
+
+}
+.Header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5% 0 2% ;
+}
+.Header--account{
+    margin-top: 1.8rem;
+}
+p{
+    color: var(--black);
+}
+
+.Header a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1.05rem;
+    margin-top: 1.8rem;
+}
+.Header  a:hover {
+    text-decoration: none;
+    color: red;
+    font-size: 1.1rem;
+}
+
+nav{
+    background-color:var(--black) ; 
+}
+nav ul{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    list-style: none;
+    padding: 2%;
+}
+nav ul a{
+    text-decoration: none;
+    color: white;
+}
+nav ul a:hover{
+    color: var(--black);
+}
+nav ul li:hover{
+    background-color: #4c96d7;
+    
+}
+.Hero{
+    position: relative;
+}
+.Hero__img{
+    width: 100%;
+    position: relative;
+}
+.Hero--cta{
+    background-color: #3a3a3a1f;
+    position: absolute;
+    top: 0;
+}
+.Hero p{
+    color: var(--celeste-dark);
+    font-size: 1.1rem;
+}
+
+.Hero--title{
+    font-size: 1.3rem;
+    color: var(--celeste-dark);
+    text-shadow: 1px 1px 0 black;
+}
+.Hero__img--cta{
+    
+    max-width: 180px;
+}
+figure{
+    text-align: center;
+}
+
+/************ MAIN ***********/
+
+main{
+    width: 96%;
+    margin: 0 auto;
+}
+
+.Reviews li {
+    line-height: 2rem;
+}
+
+
+
+.Upgrades{
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 1fr 1fr  ;
+    max-width: 380px;
+}
+.Upgrades h2{
+    grid-area: 1/1/2/3;
+}
+.Upgrades > div{
+    text-align: center;
+}
+.Upgrades--box{
+    background-color: var(--celeste-dark);
+    height: 80px;
+
+}
+.Upgrades img{
+    margin: 10px;
+    width: 70px;
+    height: 60px;
+}
+
+.Footer--information{
+    
+    margin-top: 2rem;
+    text-align: center;
+    border-top: 4px solid var(--black);
+padding: 1rem;}
+.Footer--information p {
+    margin: 0.2rem;
+}
+
+.show-review{
+    overflow: hidden;
+    padding: 1rem;
+    margin: 1rem 0 0 0;
+    background-color:  rgba(192, 192, 192, 0.719);
+    border: 3px solid var(--celeste-dark);
+    border-radius: 1rem;
+}
+.show-review p{ 
+    margin: 0;
+    padding: 0;
+}
+.show-review .reviewText{ 
+        margin: 0.2rem 0 1rem 0;
+        padding: 0.4rem 0;
+    background-color: white;
+    border-radius: 0.3rem;
+}
+
+@media only screen and (min-width: 740px) {
+    .Home__main{
+        display: grid;
+        grid-template-columns:  3% 1fr 1fr 3%;
+
+    }
+    figure{
+        position: absolute;top: 120px;left: 0;margin: 0;
+    }
+    .Hero__img--cta{width: 140px;}
+    h1{
+        grid-area: 1/1/2/5;}
+    .Hero{
+        grid-area: 2/2/3/4;}
+    .Upgrades{
+        grid-area: 3/2/4/3;}
+    .Reviews{
+        grid-area: 3/3/4/4;
+        justify-self: center;}
+}
+@media only screen and (min-width: 960px) {
+    body{
+        background-image: url(../images/site/small_check.jpg);
+    }
+    #wrapper{
+        background-color: white;
+        border: 5px solid  var(--celeste-dark);
+        border-radius: 1rem;
+        max-width: 950px;
+        margin: 2rem auto;
+    
+    }
+ 
+}
+form label{
+    margin-top: 0;
+    font-weight: bold;
+}
+form span{
+    font-weight: 200;
+}
+form input ,select, textarea{
+    background-color: var(--celeste-light) ;
+}
+form button, form input[type="submit"], #new-account,.btn {
+    background-color: var(--celeste-dark);
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.1rem;}
+form button:hover, #new-account:hover ,form input[type="submit"]:hover {
+    background-color: var(--black);color: white;}
+#new-account a {text-decoration: none;color: black;display: inline-block;padding: 0.5rem 0;width: 100%;
+}
+#new-account a:hover {color: white;}
+
+           /* Login.html */
+.Login__main h1{
+    margin-left: 5%;
+}
+.Login__main form, .classification__main form, .vehicle__main form{
+    margin: 0 5%;
+    width: 90%;
+}
+.Login__main input ,select,.reviewInput,.reviewTextarea, .Login__main button , #new-account , .classification__main input, .vehicle__main input , .vehicle__main textarea ,.btn{
+    margin: 0.4rem 0 0 0;height: 40px;width: 100%;padding: 0 ;border: none;border-radius: 0.5rem;
+}
+
+form input, form button , form textarea, form select{
+    display: block;}
+
+/* Registration */
+.Registration__main h1{
+    margin-left: 5%;
+}
+.Registration__main form{
+    margin: 0 5%;
+    width: 90%;
+}
+.Registration__main input , .Registration__main button{
+margin: 0.5rem 0 1rem 0;height: 40px;width: 100%;padding: 0 ;border: none;border-radius: 0.5rem;
+}
+
+@media only screen and (min-width: 740px) {
+    .Login__main input ,.reviewInput,.reviewTextarea, select, .Login__main button, #new-account,  .vehicle__main textarea, .classification__main input, .vehicle__main input{
+        margin: 0.5rem 0 1rem 0;
+        width: 400px;
+
+    }
+    #new-account a {
+        
+        width: 390px;
+        
+    }
+    form span{
+        margin: 0.5rem 0 1rem 0;
+        width: 400px;
+        display: inline-block;
+
+    }
+    .Registration__main input , #btn-show ,.btn{
+        margin: 0.5rem 0 1rem 0;
+        padding: 0.5rem;
+        width: 400px;
+        
+        
+    }
+    
+}
+
+/* Registration */
+
+
+#inv-display{
+ margin: 0;
+ padding: 0;
+ display: flex;
+ flex-direction: column;
+}
+#inv-display  li{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+#inv-display li{
+
+ margin-bottom: .5em;
+ border-radius: 0.5rem;
+ border: 1px #ccc solid;
+ list-style-type: none;
+ flex: 1 1 auto;
+ padding-bottom: 0.5rem;
+}
+
+#inv-display li img {
+    max-width: 100%;
+}
+
+
+/* enhancement 8  */
+#vehicleDetail{
+    display: block;
+    width: 100%;
+    font-size: 1.1rem;
+}
+.left{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.left img {
+    width: 100%;
+    max-width: 500px;
+}
+
+.left p{
+    margin-top: 2rem;
+    font-weight: bold;
+}
+.gray{
+    border-radius:0.3rem;
+    padding: 0.5rem;
+    background-color: #47474731;
+}
+
+#inv-display h2 a{
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: var(--celeste-dark) ;
+}
+#primaryImg fieldset input{
+    display: inline-block;    
+}
+#primaryImg fieldset{
+    border: none;
+    margin: 0 0 1rem 0;
+    padding: 0;
+    
+}
+#image-display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+#image-display li{
+    list-style: none;
+    
+}
+#image-display img{
+    width: 200px;
+
+}
+input[type='file']{
+    margin: 1rem 0;
+    background-color: transparent;
+}
+.zoom{
+    transition: transform 0.3s ease;
+    
+}
+.zoom:hover{
+    transform: scale(1.4) translate(2rem);
+    margin-right: 0.2rem;
+    border-radius: 1rem;
+    border: solid 3px var(--celeste-dark);
+    box-shadow: 2px 2px 10px 3px black;
+    
+}
+.zoom:last-of-type:hover{
+    transform: scale(1.4) translate(-2rem);
+  
+}
+.zoom:first-of-type:hover{
+    transform: scale(1.4) translate(2rem);
+  
+}
+@media only screen and (max-width: 739px) {
+
+.vehiclesDetail-container{
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    
+}
+.imgThumbnail{
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    
+    margin-right: 0.2rem;
+}
+.imgThumbnail img{
+    margin-bottom: 0.2rem;
+    width: 200px;
+    min-width: 100px;
+}
+}
+@media only screen and (min-width: 740px) {
+    #zoom img:hover{
+        transform: scale(2) translate(2rem);
+        border-radius: 1rem;
+        border: solid 3px var(--celeste-dark);
+        box-shadow: 2px 2px 10px 3px black;}
+    #image-display{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        
+        
+    }
+
+    .vehiclesDetail-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        
+    }
+    .imgThumbnail{
+        display: flex; 
+        flex-direction: column;
+        width: 15%;
+        margin-right: 0.2rem;
+    }
+    .imgThumbnail img{
+        margin-bottom: 0.2rem;
+    }
+
+
+
+
+
+    #vehicleDetail{
+        display: flex;
+    }
+    .left{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+    justify-content: center;
+    }
+    .left img {
+        width: 100%;
+        max-width: 500px;
+    }
+    .right{
+        padding-left: 2rem;
+        width: 60%;
+        
+    }
+
+/* For vehicle display in classification view */
+#inv-display {
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+
+
+#inv-display li {
+    max-width: 200px;
+    flex: 1 0 auto;
+    text-align: center;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 0.5rem;
+}
+  
+#inv-display div {
+    width: 100%;
+}
+}
+.reviewTextarea{
+    height: 6rem;
+    padding:0.7rem 0.5rem ;
+}
+.red{
+    color: red;
+}
+.deleteReview{
+    margin-top: 1rem;
+    background-color:  rgba(192, 192, 192, 0.719);
+    padding: 1rem 0.5rem;
+}
+.deleteReview p{
+    margin: 0;
+    padding: 0.3rem ;
+    background-color:  white;
+}
+
+.ad a {
+    color: var(--celeste-dark);
+    text-decoration: none;
+    
+}
+.ad a:hover {
+    color: red;
+    text-decoration: none;
+}
+.ad a:active {
+    transform: scale(1.1);
+}
+.ad li {
+    margin-bottom: 0.5rem;
+    list-style: none;
+}
+.ad li a:first-of-type {
+    margin-left: 1rem;
+}
+
